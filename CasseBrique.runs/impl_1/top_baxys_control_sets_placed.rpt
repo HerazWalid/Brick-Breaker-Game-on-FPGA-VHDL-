@@ -1,0 +1,104 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Dec  5 18:46:19 2025
+| Host         : WALID running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_baxys_control_sets_placed.rpt
+| Design       : top_baxys
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    31 |
+| Unused register locations in slices containing registers |   104 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      4 |            5 |
+|      5 |            5 |
+|      6 |            2 |
+|      7 |            1 |
+|      8 |            5 |
+|      9 |            1 |
+|     10 |            2 |
+|     11 |            1 |
+|    16+ |            8 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              20 |            9 |
+| No           | No                    | Yes                    |             129 |           50 |
+| No           | Yes                   | No                     |              39 |           11 |
+| Yes          | No                    | No                     |              42 |           10 |
+| Yes          | No                    | Yes                    |             112 |           51 |
+| Yes          | Yes                   | No                     |              50 |           14 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+---------------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|     Clock Signal     |                         Enable Signal                         |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count |
++----------------------+---------------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|  clk100_IBUF_BUFG    |                                                               |                                                  |                1 |              1 |
+|  clk25_BUFG          | obj_ctrl/ball_ctrl/inc_type[3]_i_1_n_0                        | obj_ctrl/ball_ctrl/ouest                         |                3 |              4 |
+|  clk25_BUFG          | accelero_mgr/accelero/Cmd_Reg[0]_4                            | accelero_mgr/accelero/Cmd_Reg[0][6]_i_1_n_0      |                1 |              4 |
+|  clk25_BUFG          | accelero_mgr/accelero/FSM_sequential_StC_Adxl_Ctrl[3]_i_1_n_0 | obj_ctrl/ball_ctrl/ouest                         |                2 |              4 |
+|  clk25_BUFG          | accelero_mgr/accelero/sel                                     | accelero_mgr/accelero/Reset_Cnt_Num_Reads        |                1 |              4 |
+|  clk25_BUFG          | accelero_mgr/accelero/StC_Adxl_Ctrl[3]                        | obj_ctrl/ball_ctrl/ouest                         |                1 |              4 |
+|  ColorGen/mondiv/CLK | ColorGen/r                                                    | obj_ctrl/ball_ctrl/ouest                         |                2 |              5 |
+|  ColorGen/mondiv/CLK | ColorGen/b                                                    | obj_ctrl/ball_ctrl/ouest                         |                2 |              5 |
+|  ColorGen/mondiv/CLK | ColorGen/g                                                    | obj_ctrl/ball_ctrl/ouest                         |                2 |              5 |
+|  clk25_BUFG          | accelero_mgr/accelero/Cmd_Reg[1][6]_i_2_n_0                   | accelero_mgr/accelero/Cmd_Reg[1]0_in[7]          |                1 |              5 |
+|  clk25_BUFG          | obj_ctrl/ball_ctrl/zone_pad_bounce[4]_i_1_n_0                 | obj_ctrl/ball_ctrl/ouest                         |                2 |              5 |
+|  clk25_BUFG          |                                                               | accelero_mgr/accelero/SPI_Interface/SCLK_2X_DIV0 |                2 |              6 |
+|  clk25_BUFG          | accelero_mgr/accelero/Cmd_Reg[2]_5                            | accelero_mgr/accelero/Cmd_Reg[2]_3[7]            |                1 |              6 |
+|  clk25_BUFG          | accelero_mgr/accelero/Shift_Cmd_Reg                           | obj_ctrl/ball_ctrl/ouest                         |                3 |              7 |
+|  clk25Hz/CLK         | obj_ctrl/pad_ctrl/ypong_left                                  | obj_ctrl/ball_ctrl/ouest                         |                2 |              8 |
+|  clk25_BUFG          | accelero_mgr/accelero/SPI_Interface/SHIFT_TICK_IN             |                                                  |                1 |              8 |
+|  clk25_BUFG          | accelero_mgr/accelero/SPI_Interface/DONE_1_i_1_n_0            |                                                  |                1 |              8 |
+|  clk25_BUFG          | accelero_mgr/accelero/SPI_Interface/MOSI_REG[7]_i_1_n_0       |                                                  |                2 |              8 |
+|  clk25_BUFG          | obj_ctrl/pad_ctrl/ypong_right                                 | obj_ctrl/ball_ctrl/ouest                         |                2 |              8 |
+|  clk25Hz/CLK         | game_ctrl/game_select/E[0]                                    | obj_ctrl/ball_ctrl/ouest                         |                3 |              9 |
+|  clk25_BUFG          |                                                               | accelero_mgr/accelero/Cnt_SS_Inactive0           |                3 |             10 |
+|  clk25_BUFG          | vga_ctrl/sel                                                  | obj_ctrl/ball_ctrl/ouest                         |                4 |             10 |
+|  clk25_BUFG          | aff/sel_seg[3]_i_1_n_0                                        | obj_ctrl/ball_ctrl/ouest                         |                6 |             11 |
+|  clk25_BUFG          | accelero_mgr/accelero/sel                                     | accelero_mgr/accelero/ACCEL_Y_SUM[0]_i_1_n_0     |                4 |             16 |
+|  clk25_BUFG          |                                                               | accelero_mgr/accelero/Reset_Sample_Rate_Div      |                4 |             17 |
+|  clk25_BUFG          |                                                               |                                                  |                8 |             19 |
+|  clk25_BUFG          | obj_ctrl/ball_ctrl/xball[9]_i_1_n_0                           | obj_ctrl/ball_ctrl/ouest                         |               17 |             20 |
+|  clk25_BUFG          | buttons/compteur[0]_i_1_n_0                                   | obj_ctrl/ball_ctrl/ouest                         |                6 |             22 |
+|  clk25_BUFG          | accelero_mgr/accelero/SPI_Interface/Shift_Data_Reg            |                                                  |                6 |             26 |
+|  clk100_IBUF_BUFG    |                                                               | obj_ctrl/ball_ctrl/ouest                         |               15 |             49 |
+|  clk25_BUFG          |                                                               | obj_ctrl/ball_ctrl/ouest                         |               37 |             86 |
++----------------------+---------------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+
+
